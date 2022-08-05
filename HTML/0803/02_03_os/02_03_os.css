@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+}
+
+.board {
+    width: 800px;
+    border: 1px solid black;
+}
+
+.board>div {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.board>div:nth-of-type(2n) {
+    /*2n 번째 div*/
+    background-color: black;
+}
+
+.board>div:nth-of-type(2n-1) {
+    /*홀수번째 div*/
+    background-color: white;
+}
+
+.board:nth-last-of-type(2n)>div:nth-of-type(2n-1) {
+    background-color: black;
+}
+
+.board:nth-last-of-type(2n)>div:nth-of-type(2n) {
+    background-color: white;
+}
