@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{pick}} 은 {{pick|length}}글자 </h1>
+    <h1>{{foods|join:', '}}</h1>
+    <h1>{{con|upper|truncatewords:3}}</h1> {# truncatewords 는 단어 개수(띄어쓰기 등) #}
+
+    <a href="{% url "index" %}"> 뒤로 </a>
+    
+    <p>MENU</p>
+    <ul>
+        {% for food in foods %}
+            <li>{{ food }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>{{my_age}}</h1>
+
+    {% if my_age == 20 %}
+        <h1>새내기입니다.</h1>
+    {% elif my_age < 20 %}
+        <h1>아직 성인이 아닙니다.</h1>
+    {% else %}
+        <h1>성인입니다.</h1>
+    {% endif %}
+</body>
+</html>
+{# 한줄 주석 #}
+
+{% comment %}
+여러줄 주석
+{% endcomment %}
